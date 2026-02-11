@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   GHOST GLAZE WAYBAR (MATUGEN INTEGRATED)
+   Ghost Glaze
    ═══════════════════════════════════════════════════════════════════════════ */
 
 @import url("../../.config/matugen/generated/waybar-colors.css");
@@ -23,10 +23,8 @@ window#waybar > box {
     background-color: alpha(@surface, 0.4); /* Glass transparency */
     border: 1px solid alpha(@outline, 0.2);  /* Thin glass edge */
     border-radius: 20px;
-    margin: 4px 10px;
-    padding: 2px 8px;
-    /* Soft shadow for depth */
-    box-shadow: 0 4px 15px alpha(@shadow, 0.2);
+    margin: 4px 6px;
+    padding: 2px 6px;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -58,6 +56,7 @@ window#waybar > box {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2px 6px;
+    border-bottom: 2px solid alpha(@primary, 0.3);
 }
 
 #workspaces button {
@@ -106,7 +105,7 @@ window#waybar #workspaces button.active {
     padding: 0 12px;
     margin: 4px 4px;
     border-radius: 12px;
-    border-bottom: 2px solid alpha(@secondary, 0.3);
+    border-bottom: 2px solid alpha(@secondary, 0.2);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -175,25 +174,6 @@ window#waybar #workspaces button.active {
 }
 /* ─────────────────────────────────────────────────────────────────────────────
    RIGHT MODULES
-   ───────────────────────────────────────────────────────────────────────────── */
-
-/* Common style for right-side bubbles */
-#battery, #tray {
-    padding: 0 10px;
-    margin: 4px 2px;
-    border-radius: 10px;
-    background: alpha(@surface_container, 0.3);
-    color: @on_surface_variant;
-    transition: all 0.2s ease;
-}
-
-#battery:hover {
-    background: alpha(@surface_container_highest, 0.6);
-    color: @primary;
-}
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   NETWORK, PULSEAUDIO, BACKLIGHT (UNIFIED MATUGEN GLASS)
    ───────────────────────────────────────────────────────────────────────────── */
 
 /* Common base for all right-side modules */
@@ -318,24 +298,55 @@ window#waybar #workspaces button.active {
     }
 }
 
+/* Common style for right-side bubbles */
+#battery, #tray {
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    background: alpha(@surface_container, 0.3); /* Consistent Glass background */
+    transition: all 0.3s ease-in-out;
+}
 
 /* Battery Dynamic Styling */
+
+#battery:hover {
+    background: alpha(@surface_container_highest, 0.6);
+    color: @primary;
+}
+
+#battery {
+    color: @primary;
+    background: alpha(@surface_container, 0.3);
+    border-bottom: 2px solid alpha(@primary, 0.2);
+}
+
 #battery.charging, #battery.plugged {
     color: @primary;
-    background: alpha(@primary_container, 0.4);
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    background: alpha(@surface_container, 0.3);
+    border-bottom: 2px solid alpha(@primary, 0.2);
 }
 
 #battery.critical:not(.charging) {
     background: alpha(@error, 0.6);
     color: @on_error;
+    border-bottom: 2px solid alpha(@error, 0.3);
     animation: blink 1s infinite alternate;
 }
 
 /* System Tray Glass */
 #tray {
-    margin-left: 6px;
-    background: alpha(@surface_container_low, 0.5);
+    
+    color: @primary;
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    border-bottom: 2px solid alpha(@primary, 0.2);
+    background: alpha(@surface_container_low, 0.2);
 }
+
 
 /* Power Button Gem */
 #custom-power {
