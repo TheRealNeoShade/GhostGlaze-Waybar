@@ -1,4 +1,4 @@
-# 󰮯 GhostGlaze Waybar
+# 🔮 GhostGlaze Waybar
 
 A minimal, dreamy glassmorphism Waybar theme featuring **Matugen** dynamic colors and a custom **Pacman-Logic** workspace system.
 
