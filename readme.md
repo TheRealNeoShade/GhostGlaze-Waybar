@@ -25,7 +25,7 @@ GhostGlaze adapts to your wallpaper instantly using Matugen. Here is how it look
 | ![Variant 4](./assets/color4.png) | ![Variant 5](./assets/color5.png) |
 
 ### Version 2 Preview
-![v2](assets/v2.png)
+![v2](./assets/v2.png)
 
 ### Prerequisites
 - **Fonts:** [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads) (Required for icons).
