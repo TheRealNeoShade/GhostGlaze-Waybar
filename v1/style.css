@@ -7,7 +7,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+    font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font", sans-serif;
     font-weight: 600;
     font-size: 13px;
     min-height: 0;
@@ -35,7 +35,7 @@ window#waybar > box {
 #custom-launcher {
     background: linear-gradient(135deg, @primary, @primary_fixed_dim);
     color: @on_primary;
-    padding: 0px 13px 2px 8px;
+    padding: 0px 9px 2px 8px;
     margin: 6px 4px 6px 4px;
     border-radius: 18px;
     font-size: 16px;
@@ -190,7 +190,7 @@ window#waybar #workspaces button.active {
 /* 1. NETWORK - Tertiary Accent */
 #network {
     color: @tertiary;
-    padding: 0px 12px 2px 8px;
+    padding: 0px 9px 2px 8px;
     margin: 4px 2px;
     border-radius: 10px;
     font-size: 16px;
@@ -352,7 +352,7 @@ window#waybar #workspaces button.active {
 #custom-power {
     background: linear-gradient(135deg, @primary, @primary_fixed_dim);
     color: @on_primary;
-    padding: 0px 13px 2px 8px;
+    padding: 0px 9px 2px 8px;
     margin: 6px 4px 6px 4px;
     border-radius: 18px;
     font-size: 16px;
